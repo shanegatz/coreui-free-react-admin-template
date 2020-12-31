@@ -17,7 +17,7 @@ import {
   CFormGroup,
   CLabel
 } from '@coreui/react'
-import { DocsLink } from 'src/reusable'
+import { DocsLink } from '../../../reusable'
 
 const Toaster = () => {
 
@@ -47,7 +47,7 @@ const Toaster = () => {
 
   const addToast = () => {
     setToasts([
-      ...toasts, 
+      ...toasts,
       { position, autohide: autohide && autohideValue, closeButton, fade }
     ])
   }

@@ -4,7 +4,7 @@ import {
   CCardHeader,
   CCardBody
 } from '@coreui/react'
-import { DocsLink } from 'src/reusable'
+import { DocsLink } from '../../../reusable'
 
 const Typography = () => {
   return (
@@ -69,10 +69,10 @@ const Typography = () => {
           Headings
         </CCardHeader>
         <CCardBody>
-          <p><code className="highlighter-rouge">.h1</code> through 
-          <code className="highlighter-rouge">.h6</code> 
+          <p><code className="highlighter-rouge">.h1</code> through
+          <code className="highlighter-rouge">.h6</code>
           classes are also available, for when you
-          want to match the font styling of a heading but cannot use the 
+          want to match the font styling of a heading but cannot use the
           associated HTML element.</p>
           <div className="bd-example">
             <p className="h1">h1. Bootstrap heading</p>
