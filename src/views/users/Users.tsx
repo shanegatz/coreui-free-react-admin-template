@@ -13,7 +13,7 @@ import {
 
 import usersData from './UsersData'
 
-const getBadge = status => {
+const getBadge = (status: string) => {
   switch (status) {
     case 'Active': return 'success'
     case 'Inactive': return 'secondary'
@@ -25,11 +25,11 @@ const getBadge = status => {
 
 const Users = () => {
   const history = useHistory()
-  const queryPage = useLocation().search.match(/page=([0-9]+)/, '')
+  const queryPage = useLocation().search.match(/page=([0-9]+)/)
   const currentPage = Number(queryPage && queryPage[1] ? queryPage[1] : 1)
   const [page, setPage] = useState(currentPage)
 
-  const pageChange = newPage => {
+  const pageChange = (newPage: any) => {
     currentPage !== newPage && history.push(`/users?page=${newPage}`)
   }
 
@@ -57,10 +57,10 @@ const Users = () => {
             itemsPerPage={5}
             activePage={page}
             clickableRows
-            onRowClick={(item) => history.push(`/users/${item.id}`)}
+            onRowClick={(item: any) => history.push(`/users/${item.id}`)}
             scopedSlots = {{
               'status':
-                (item)=>(
+                (item: any)=>(
                   <td>
                     <CBadge color={getBadge(item.status)}>
                       {item.status}
@@ -73,7 +73,7 @@ const Users = () => {
             activePage={page}
             onActivePageChange={pageChange}
             pages={5}
-            doubleArrows={false} 
+            doubleArrows={false}
             align="center"
           />
           </CCardBody>
