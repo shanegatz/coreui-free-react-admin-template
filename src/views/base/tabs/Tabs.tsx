@@ -147,7 +147,7 @@ const Tabs = () => {
             Controlled tabs
           </CCardHeader>
           <CCardBody>
-            <CTabs activeTab={active} onActiveTabChange={idx => setActive(idx)}>
+            <CTabs activeTab={active} onActiveTabChange={(idx:number) => setActive(idx)}>
               <CNav variant="tabs">
                 <CNavItem>
                   <CNavLink>

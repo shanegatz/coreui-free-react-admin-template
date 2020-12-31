@@ -107,7 +107,8 @@ const CNavbars = () => {
           CNavbar text
         </CCardHeader>
         <CCardBody>
-          <CNavbar toggleable="sm" light color="light">
+          {/*<CNavbar toggleable="sm" light color="light">*/}
+          <CNavbar light color="light">
             <CToggler
               inNavbar
               onClick={()=>{ setNavbarText(!navbarText)}}

@@ -16,15 +16,15 @@ const Collapses = () => {
 
   const [collapse, setCollapse] = useState(false)
   const [collapseMulti, setCollapseMulti] = useState([false, false])
-  const [accordion, setAccordion] = useState(1)
+  const [accordion, setAccordion] = useState<number | null>(1)
   const [fade, setFade] = useState(true)
 
-  const toggle = (e) => {
+  const toggle = (e: any) => {
     setCollapse(!collapse)
     e.preventDefault()
   }
 
-  const toggleMulti = (type) => {
+  const toggleMulti = (type: any) => {
     let newCollapse = collapseMulti.slice()
     switch (type) {
       case "left":

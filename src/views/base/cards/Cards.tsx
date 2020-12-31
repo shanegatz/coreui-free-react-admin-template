@@ -66,7 +66,7 @@ const Cards = () => {
             <CCardHeader>
               Card with switch
               <div className="card-header-actions">
-                <CSwitch className={'float-right mb-0'} color={'info'} defaultChecked size={'sm'} tabIndex="0" />
+                <CSwitch className={'float-right mb-0'} color={'info'} defaultChecked size={'sm'} tabIndex={0} />
               </div>
             </CCardHeader>
             <CCardBody>

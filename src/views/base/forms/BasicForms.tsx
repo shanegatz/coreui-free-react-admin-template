@@ -69,7 +69,9 @@ const BasicForms = () => {
                 <CCol xs="4">
                   <CFormGroup>
                     <CLabel htmlFor="ccmonth">Month</CLabel>
-                    <CSelect custom name="ccmonth" id="ccmonth">
+                    <CSelect
+                      // custom
+                      name="ccmonth" id="ccmonth">
                       <option value="1">1</option>
                       <option value="2">2</option>
                       <option value="3">3</option>
@@ -88,7 +90,9 @@ const BasicForms = () => {
                 <CCol xs="4">
                   <CFormGroup>
                     <CLabel htmlFor="ccyear">Year</CLabel>
-                    <CSelect custom name="ccyear" id="ccyear">
+                    <CSelect
+                      // custom
+                      name="ccyear" id="ccyear">
                       <option>2017</option>
                       <option>2018</option>
                       <option>2019</option>
@@ -221,7 +225,7 @@ const BasicForms = () => {
                     <CTextarea
                       name="textarea-input"
                       id="textarea-input"
-                      rows="9"
+                      rows={9}
                       placeholder="Content..."
                     />
                   </CCol>
@@ -231,7 +235,9 @@ const BasicForms = () => {
                     <CLabel htmlFor="select">Select</CLabel>
                   </CCol>
                   <CCol xs="12" md="9">
-                    <CSelect custom name="select" id="select">
+                    <CSelect
+                      // custom
+                      name="select" id="select">
                       <option value="0">Please select</option>
                       <option value="1">Option #1</option>
                       <option value="2">Option #2</option>
@@ -243,8 +249,10 @@ const BasicForms = () => {
                   <CCol md="3">
                     <CLabel htmlFor="selectLg">Select Large</CLabel>
                   </CCol>
-                  <CCol xs="12" md="9" size="lg">
-                    <CSelect custom size="lg" name="selectLg" id="selectLg">
+                  <CCol xs="12" md="9">
+                    <CSelect
+                      //custom
+                      size="lg" name="selectLg" id="selectLg">
                       <option value="0">Please select</option>
                       <option value="1">Option #1</option>
                       <option value="2">Option #2</option>
@@ -257,7 +265,9 @@ const BasicForms = () => {
                     <CLabel htmlFor="selectSm">Select Small</CLabel>
                   </CCol>
                   <CCol xs="12" md="9">
-                    <CSelect custom size="sm" name="selectSm" id="SelectLm">
+                    <CSelect
+                      //custom
+                      size="sm" name="selectSm" id="SelectLm">
                       <option value="0">Please select</option>
                       <option value="1">Option #1</option>
                       <option value="2">Option #2</option>
@@ -273,7 +283,7 @@ const BasicForms = () => {
                   </CCol>
                   <CCol xs="12" md="9">
                     <CSelect
-                      custom
+                      //custom
                       name="disabledSelect"
                       id="disabledSelect"
                       disabled
@@ -414,7 +424,8 @@ const BasicForms = () => {
                   </CCol>
                 </CFormGroup>
                 <CFormGroup row>
-                  <CLabel col md="3" htmlFor="file-input">File input</CLabel>
+                  {/*<CLabel col md="3" htmlFor="file-input">File input</CLabel>*/}
+                  <CLabel col htmlFor="file-input">File input</CLabel>
                   <CCol xs="12" md="9">
                     <CInputFile id="file-input" name="file-input"/>
                   </CCol>
@@ -436,7 +447,8 @@ const BasicForms = () => {
                   </CCol>
                 </CFormGroup>
                 <CFormGroup row>
-                  <CLabel col md={3}>Custom file input</CLabel>
+                  {/*<CLabel col md={3}>Custom file input</CLabel>*/}
+                  <CLabel col>Custom file input</CLabel>
                   <CCol xs="12" md="9">
                     <CInputFile custom id="custom-file-input"/>
                     <CLabel htmlFor="custom-file-input" variant="custom-file">
@@ -600,19 +612,22 @@ const BasicForms = () => {
             <CCardBody>
               <CForm action="" method="post" className="form-horizontal">
                 <CFormGroup row>
-                  <CLabel sm="5" col="sm" htmlFor="input-small">Small Input</CLabel>
+                  {/*<CLabel sm="5" col="sm" htmlFor="input-small">Small Input</CLabel>*/}
+                  <CLabel col="sm" htmlFor="input-small">Small Input</CLabel>
                   <CCol sm="6">
                     <CInput size="sm" type="text" id="input-small" name="input-small" className="input-sm" placeholder=".form-control-sm" />
                   </CCol>
                 </CFormGroup>
                 <CFormGroup row>
-                  <CLabel sm="5" col htmlFor="input-normal">Normal Input</CLabel>
+                  {/*<CLabel sm="5" col htmlFor="input-normal">Normal Input</CLabel>*/}
+                  <CLabel col htmlFor="input-normal">Normal Input</CLabel>
                   <CCol sm="6">
                     <CInput id="input-normal" name="input-normal" placeholder="Normal" />
                   </CCol>
                 </CFormGroup>
                 <CFormGroup row>
-                  <CLabel sm="5" col="lg" htmlFor="input-large">Large Input</CLabel>
+                  {/*<CLabel sm="5" col="lg" htmlFor="input-large">Large Input</CLabel>*/}
+                  <CLabel col="lg" htmlFor="input-large">Large Input</CLabel>
                   <CCol sm="6">
                     <CInput size="lg" type="text" id="input-large" name="input-large" className="input-lg" placeholder=".form-control-lg" />
                   </CCol>
@@ -1129,7 +1144,8 @@ const BasicForms = () => {
                   </CButton>
                 </div>
               </CCardHeader>
-              <CCollapse show={collapsed} timeout={1000}>
+              {/*<CCollapse show={collapsed} timeout={1000}>*/}
+              <CCollapse show={collapsed}>
                 <CCardBody>
                   <CForm className="form-horizontal">
                     <CFormGroup>
@@ -1208,4 +1224,4 @@ const BasicForms = () => {
   )
 }
 
-export default BasicForms
+export default BasicForms;

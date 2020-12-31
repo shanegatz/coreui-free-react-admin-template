@@ -4,58 +4,59 @@ import {
   CCard,
   CCardBody,
   CCardHeader,
-  CPopover,
+  CTooltip,
   CRow,
   CCol,
   CLink
 } from '@coreui/react'
 import { DocsLink } from '../../../reusable'
+import { Placement} from "../const";
 
-const Popovers = () => {
-  const placements = [
+const Tooltips = () => {
+  const placements:Placement[] = [
     'top-start', 'top', 'top-end',
     'bottom-start', 'bottom', 'bottom-end',
     'right-start', 'right', 'right-end',
     'left-start', 'left', 'left-end'
-  ]
+  ];
 
   return (
     <>
       <CCard>
         <CCardHeader>
-          Popovers
-          <DocsLink name="CPopover"/>
+          Tooltips
+          <DocsLink name="CTooltip"/>
         </CCardHeader>
         <CCardBody>
           {/*eslint-disable-next-line*/}
 
           <p className="text-muted">
-            Hover over the links below to see popover:
+            Hover over the links below to see tooltips:
           </p>
 
           <p className="muted">
             Tight pants next level keffiyeh
-            <CPopover header="Popover header" content="Popover text">
+            <CTooltip content="Tooltip text">
               <CLink> you probably </CLink>
-            </CPopover>
+            </CTooltip>
               haven't heard of them.
             Photo booth beard raw denim letterpress vegan messenger
             bag stumptown. Farm-to-table seitan, mcsweeney's fixie
             sustainable quinoa 8-bit american apparel
-            <CPopover header="Popover header" content="Popover text">
+            <CTooltip content="Tooltip text">
               <CLink> have a </CLink>
-            </CPopover>
+            </CTooltip>
             terry richardson vinyl chambray. Beard stumptown,
             cardigans banh mi lomo thundercats. Tofu biodiesel
             williamsburg marfa, four loko mcsweeney''s cleanse
             vegan chambray. A really ironic artisan
-            <CPopover header="Popover header" content="Popover text">
+            <CTooltip content="Tooltip text">
               <CLink> whatever keytar </CLink>
-            </CPopover>
+            </CTooltip>
             scenester farm-to-table banksy Austin
-            <CPopover header="Popover header" content="Popover text">
+            <CTooltip content="Tooltip text">
               <CLink> twitter handle </CLink>
-            </CPopover>
+            </CTooltip>
 
             freegan cred raw denim single-origin coffee viral.
           </p>
@@ -66,7 +67,7 @@ const Popovers = () => {
 
       <CCard>
         <CCardHeader>
-          Popovers
+          Tooltips
           <small> placement</small>
         </CCardHeader>
         <CCardBody>
@@ -78,16 +79,14 @@ const Popovers = () => {
                   className="py-4 text-center"
                   key={placement}
                 >
-                  <CPopover header="Popover header"
-                    content={`Popover with placement: ${placement}`}
+                  <CTooltip
+                    content={`Tooltip with placement: ${placement}`}
                     placement={placement}
-                    interactive={true}
-                    trigger="click"
                   >
                     <CButton color="primary">
                       { placement }
                     </CButton>
-                  </CPopover>
+                  </CTooltip>
                 </CCol>)
               })}
             </CRow>
@@ -98,4 +97,4 @@ const Popovers = () => {
   )
 }
 
-export default Popovers
+export default Tooltips;

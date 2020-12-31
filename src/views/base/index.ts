@@ -2,7 +2,6 @@ import Breadcrumbs from './breadcrumbs/Breadcrumbs';
 import Cards from './cards/Cards';
 import Carousels from './carousels/Carousels';
 import Collapses from './collapses/Collapses';
-import Dropdowns from './Dropdowns';
 import Jumbotrons from './jumbotrons/Jumbotrons';
 import ListGroups from './list-groups/ListGroups';
 import Navbars from './navbars/Navbars';
@@ -15,6 +14,6 @@ import Tabs from './tabs/Tabs';
 import Tooltips from './tooltips/Tooltips';
 
 export {
-  Breadcrumbs, Cards, Carousels, Collapses, Dropdowns, Jumbotrons, ListGroups, Navbars, Navs, Popovers, ProgressBar, Switches, Tabs, Tooltips, Paginations,
+  Breadcrumbs, Cards, Carousels, Collapses, Jumbotrons, ListGroups, Navbars, Navs, Popovers, ProgressBar, Switches, Tabs, Tooltips, Paginations,
 };
 

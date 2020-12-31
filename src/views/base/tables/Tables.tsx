@@ -10,9 +10,9 @@ import {
 } from '@coreui/react'
 import { DocsLink } from '../../../reusable'
 
-import usersData from '../../users/UsersData'
+import {IUserData, usersData} from '../../users/UsersData'
 
-const getBadge = status => {
+const getBadge = (status:string) => {
   switch (status) {
     case 'Active': return 'success'
     case 'Inactive': return 'secondary'
@@ -41,7 +41,7 @@ const Tables = () => {
               pagination
               scopedSlots = {{
                 'status':
-                  (item)=>(
+                  (item: IUserData)=>(
                     <td>
                       <CBadge color={getBadge(item.status)}>
                         {item.status}
@@ -69,7 +69,7 @@ const Tables = () => {
               pagination
               scopedSlots = {{
                 'status':
-                  (item)=>(
+                  (item: IUserData)=>(
                     <td>
                       <CBadge color={getBadge(item.status)}>
                         {item.status}
@@ -100,7 +100,7 @@ const Tables = () => {
               pagination
               scopedSlots = {{
                 'status':
-                  (item)=>(
+                  (item: IUserData)=>(
                     <td>
                       <CBadge color={getBadge(item.status)}>
                         {item.status}
@@ -123,12 +123,12 @@ const Tables = () => {
             <CDataTable
               items={usersData}
               fields={fields}
-              bordered
+              border={true}
               itemsPerPage={5}
               pagination
               scopedSlots = {{
                 'status':
-                  (item)=>(
+                  (item: IUserData)=>(
                     <td>
                       <CBadge color={getBadge(item.status)}>
                         {item.status}
@@ -156,13 +156,13 @@ const Tables = () => {
               fields={fields}
               hover
               striped
-              bordered
+              border
               size="sm"
               itemsPerPage={10}
               pagination
               scopedSlots = {{
                 'status':
-                  (item)=>(
+                  (item: IUserData)=>(
                     <td>
                       <CBadge color={getBadge(item.status)}>
                         {item.status}
@@ -188,13 +188,13 @@ const Tables = () => {
               dark
               hover
               striped
-              bordered
+              border
               size="sm"
               itemsPerPage={10}
               pagination
               scopedSlots = {{
                 'status':
-                  (item)=>(
+                  (item: IUserData)=>(
                     <td>
                       <CBadge color={getBadge(item.status)}>
                         {item.status}
