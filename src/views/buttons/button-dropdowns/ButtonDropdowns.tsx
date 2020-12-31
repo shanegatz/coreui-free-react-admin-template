@@ -195,8 +195,8 @@ const ButtonDropdowns = () => {
 
             <hr/>
 
-            <CDropdown className="m-1" size="lg">
-              <CDropdownToggle color="secondary">
+            <CDropdown className="m-1">
+              <CDropdownToggle color="secondary" size="lg">
                 Large button
               </CDropdownToggle>
               <CDropdownMenu>
