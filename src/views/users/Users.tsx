@@ -11,7 +11,7 @@ import {
   CPagination
 } from '@coreui/react'
 
-import usersData from './UsersData'
+import usersData, {IUserData} from './UsersData'
 
 const getBadge = (status: string) => {
   switch (status) {
@@ -57,7 +57,7 @@ const Users = () => {
             itemsPerPage={5}
             activePage={page}
             clickableRows
-            onRowClick={(item: any) => history.push(`/users/${item.id}`)}
+            onRowClick={(item: IUserData) => history.push(`/users/${item.id}`)}
             scopedSlots = {{
               'status':
                 (item: any)=>(
