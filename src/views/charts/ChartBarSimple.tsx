@@ -1,9 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { getColor } from '@coreui/utils'
 import { CChartBar } from '@coreui/react-chartjs'
+const { getColor } = require('@coreui/utils');
 
-const ChartBarSimple = props => {
+const ChartBarSimple = (props:any) => {
 
   const {
     backgroundColor,
