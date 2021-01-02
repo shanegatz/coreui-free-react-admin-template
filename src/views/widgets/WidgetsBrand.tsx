@@ -4,7 +4,7 @@ import { CWidgetBrand, CRow, CCol } from '@coreui/react';
 import CIcon from '@coreui/icons-react';
 import ChartLineSimple from '../charts/ChartLineSimple';
 
-const WidgetsBrand = ({withCharts})=>{
+const WidgetsBrand = ({withCharts}:any)=>{
 
   // render
 
@@ -28,7 +28,6 @@ const WidgetsBrand = ({withCharts})=>{
           backgroundColor="rgba(255,255,255,.1)"
           dataPoints={[65, 59, 84, 84, 51, 55, 40]}
           label="Friends"
-          labels="months"
         />
       </CWidgetBrand>
     </CCol>
@@ -51,7 +50,6 @@ const WidgetsBrand = ({withCharts})=>{
           backgroundColor="rgba(255,255,255,.1)"
           dataPoints={[1, 13, 9, 17, 34, 41, 38]}
           label="Followers"
-          labels="months"
         />
       </CWidgetBrand>
     </CCol>
@@ -74,10 +72,9 @@ const WidgetsBrand = ({withCharts})=>{
           backgroundColor="rgba(255,255,255,.1)"
           dataPoints={[78, 81, 80, 45, 34, 12, 40]}
           label="Contracts"
-          labels="months"
         />
       </CWidgetBrand>
-    </CCol> 
+    </CCol>
 
     <CCol sm="6" lg="3">
       <CWidgetBrand
@@ -97,12 +94,11 @@ const WidgetsBrand = ({withCharts})=>{
           backgroundColor="rgba(255,255,255,.1)"
           dataPoints={[35, 23, 56, 22, 97, 23, 64]}
           label="Followers"
-          labels="months"
         />
       </CWidgetBrand>
     </CCol>
   </CRow> :
-  
+
   <CRow>
     <CCol sm="6" lg="3">
       <CWidgetBrand

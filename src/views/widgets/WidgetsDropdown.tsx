@@ -29,7 +29,6 @@ const WidgetsDropdown = () => {
               dataPoints={[65, 59, 84, 84, 51, 55, 40]}
               pointHoverBackgroundColor="primary"
               label="Members"
-              labels="months"
             />
           }
         >
@@ -61,7 +60,6 @@ const WidgetsDropdown = () => {
               pointHoverBackgroundColor="info"
               options={{ elements: { line: { tension: 0.00001 }}}}
               label="Members"
-              labels="months"
             />
           }
         >
@@ -93,7 +91,6 @@ const WidgetsDropdown = () => {
               options={{ elements: { line: { borderWidth: 2.5 }}}}
               pointHoverBackgroundColor="warning"
               label="Members"
-              labels="months"
             />
           }
         >
@@ -122,7 +119,6 @@ const WidgetsDropdown = () => {
               style={{height: '70px'}}
               backgroundColor="rgb(250, 152, 152)"
               label="Members"
-              labels="months"
             />
           }
         >

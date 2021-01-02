@@ -12,6 +12,7 @@ const ChartLineSimple = (props:any) => {
     dataPoints,
     label,
     pointed,
+    style,
     ...attributes
   } = props
 
@@ -126,6 +127,7 @@ const ChartLineSimple = (props:any) => {
       datasets={computedDatasets}
       options={computedOptions}
       labels={label}
+      style={style}
     />
   )
 }
@@ -139,7 +141,9 @@ ChartLineSimple.propTypes = {
   pointHoverBackgroundColor: PropTypes.string,
   dataPoints: PropTypes.array,
   label: PropTypes.string,
-  pointed: PropTypes.bool
+  pointed: PropTypes.bool,
+  style: PropTypes.any,
+  options: PropTypes.any,
 };
 
 ChartLineSimple.defaultProps = {

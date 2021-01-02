@@ -16,8 +16,8 @@ import CIcon from '@coreui/icons-react'
 
 import MainChartExample from '../charts/MainChartExample'
 
-const WidgetsDropdown = lazy(() => import('../widgets/WidgetsDropdown.js'))
-const WidgetsBrand = lazy(() => import('../widgets/WidgetsBrand.js'))
+const WidgetsDropdown = lazy(() => import('../widgets/WidgetsDropdown'))
+const WidgetsBrand = lazy(() => import('../widgets/WidgetsBrand'))
 
 const Dashboard = () => {
   return (

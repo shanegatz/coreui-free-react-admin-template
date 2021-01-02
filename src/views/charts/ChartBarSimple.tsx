@@ -11,6 +11,7 @@ const ChartBarSimple = (props:any) => {
     dataPoints,
     label,
     pointed,
+    style,
     ...attributes
   } = props
 
@@ -51,6 +52,7 @@ const ChartBarSimple = (props:any) => {
       datasets={defaultDatasets}
       options={defaultOptions}
       labels={label}
+      style={style}
     />
   )
 }
@@ -63,7 +65,8 @@ ChartBarSimple.propTypes = {
   pointHoverBackgroundColor: PropTypes.string,
   dataPoints: PropTypes.array,
   label: PropTypes.string,
-  pointed: PropTypes.bool
+  pointed: PropTypes.bool,
+  style: PropTypes.any
 };
 
 ChartBarSimple.defaultProps = {
