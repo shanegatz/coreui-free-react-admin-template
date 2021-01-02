@@ -4,17 +4,20 @@ import CIcon from '@coreui/icons-react'
 import { brandSet } from '@coreui/icons'
 import { DocsLink } from '../../../reusable'
 
-const toKebabCase = (str) => {
+const toKebabCase = (str:string) => {
   return str.replace(/([a-z0-9]|(?=[A-Z]))([A-Z])/g, '$1-$2').toLowerCase()
 }
 
-export const getIconsView = iconset => {
-  return Object.entries(iconset).map(([name, value]) => (
-    <CCol className="mb-5" xs="6" sm="4" md="3" xl="2" key={name}>
-      <CIcon content={value} size="2xl"/>
-      <div>{toKebabCase(name)}</div>
-    </CCol>
-  ))
+export const getIconsView = (iconset:any) => {
+  return Object.entries(iconset).map(([name, value]) => {
+    const icon = value as string[];
+    return (
+      <CCol className="mb-5" xs="6" sm="4" md="3" xl="2" key={name}>
+        <CIcon content={icon} size="2xl" />
+        <div>{toKebabCase(name)}</div>
+      </CCol>
+    );
+  });
 }
 
 const CoreUIIcons = () => {
