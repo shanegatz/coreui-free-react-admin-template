@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, {ChangeEvent, useState} from 'react'
 import {
   CCard,
   CCardHeader,
@@ -36,7 +36,7 @@ const Toaster = () => {
   const [toasts, setToasts] = useState([
     { position: 'static'},
     { position: 'static'},
-    { position: 'top-right', autohide: 3000 }
+    { position: 'top-right', autohide: 3000, closeButton: true, fade: false }
   ])
 
   const [position, setPosition] = useState('top-right')
@@ -46,15 +46,19 @@ const Toaster = () => {
   const [fade, setFade] = useState(true)
 
   const addToast = () => {
+    console.log(autohide);
+    const ah = autohide ? autohideValue : 0 ;
     setToasts([
       ...toasts,
-      { position, autohide: autohide && autohideValue, closeButton, fade }
+      { position, autohide: ah, closeButton, fade }
     ])
+
+
   }
 
 
   const toasters = (()=>{
-    return toasts.reduce((toasters, toast) => {
+    return toasts.reduce((toasters: any, toast) => {
       toasters[toast.position] = toasters[toast.position] || []
       toasters[toast.position].push(toast)
       return toasters
@@ -79,7 +83,9 @@ const Toaster = () => {
                   <CInputCheckbox
                     id="autohide"
                     checked={autohide}
-                    onChange={e => { setAutohide(e.target.checked) }}
+                    onChange={(e) => {
+                      setAutohide(!autohide)
+                    }}
                     custom
                   />
                   <CLabel variant="custom-checkbox" htmlFor="autohide">
@@ -93,8 +99,11 @@ const Toaster = () => {
                     <CInput
                       type="number"
                       value={autohideValue}
-                      onChange={e => {
-                        setAutohideValue(Number(e.target.value))
+                      onChange={(e) => {
+                        const target = e.target as HTMLTextAreaElement;
+                        const value = Number(target.value);
+
+                        setAutohideValue(value);
                       }}
                     />
                   </CFormGroup>
@@ -119,7 +128,7 @@ const Toaster = () => {
                   <CInputCheckbox
                     id="fade"
                     checked={fade}
-                    onChange={e => { setFade(e.target.checked) }}
+                    onChange={() => { setFade(!fade) }}
                     custom
                   />
                   <CLabel variant="custom-checkbox" htmlFor="fade">fade</CLabel>
@@ -130,7 +139,7 @@ const Toaster = () => {
                     id="close"
                     custom
                     checked={closeButton}
-                    onChange={e=> { setCloseButton(e.target.checked) }}
+                    onChange={() => { setCloseButton(!closeButton) }}
                   />
                   <CLabel variant="custom-checkbox" htmlFor="close">
                     closeButton
@@ -148,13 +157,13 @@ const Toaster = () => {
               </CForm>
             </CCol>
             <CCol sm="12" lg="6">
-              {Object.keys(toasters).map((toasterKey) => (
+              {Object.keys(toasters).map((toasterKey:any) => (
                 <CToaster
                   position={toasterKey}
                   key={'toaster' + toasterKey}
                 >
                   {
-                    toasters[toasterKey].map((toast, key)=>{
+                    toasters[toasterKey].map((toast:any, key:any)=>{
                     return(
                       <CToast
                         key={'toast' + key}
